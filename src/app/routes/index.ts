@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import basicRoute from '../modules/basic';
 import bookRoute from '../modules/book/book.route';
+import memberRoute from '../modules/member/member.route';
 
 interface routeInterface {
   path: string;
@@ -17,6 +18,10 @@ const moduleRoutes: routeInterface[] = [
   {
     path: '/books',
     route: bookRoute,
+  },
+  {
+    path: '/members',
+    route: memberRoute,
   },
 ];
 

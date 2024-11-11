@@ -27,7 +27,7 @@ datasource db {
   model member  {
     memberId String @id @default(uuid())
     name String
-    email String @unique
+    email String
     phone String
     membershipDate DateTime
     borrow_record borrow_record[]
