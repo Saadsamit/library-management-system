@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import basicRoute from '../modules/basic';
+import bookRoute from '../modules/book/book.route';
 
 interface routeInterface {
   path: string;
@@ -12,6 +13,10 @@ const moduleRoutes: routeInterface[] = [
   {
     path: '/',
     route: basicRoute,
+  },
+  {
+    path: '/books',
+    route: bookRoute,
   },
 ];
 

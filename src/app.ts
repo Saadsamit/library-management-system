@@ -7,9 +7,11 @@ import notFound from './app/errors/notFound';
 
 const app: Application = express();
 
+app.use(express.json());
+
 app.use(cors());
 
-app.use("/", basicRoute)
+app.use('/', basicRoute);
 
 app.use('/api', router);
 
