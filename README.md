@@ -14,3 +14,10 @@ A Library Management System (LMS) that uses Prisma as the ORM (Object-Relational
 - PostgreSQL
 - TypeScript
 - zod
+
+## Features
+
+- Managing books (add, get, update, delete)
+- Managing members (add, get, update, delete)
+- Borrowing and returning books
+- overdue books
