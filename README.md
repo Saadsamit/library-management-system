@@ -21,3 +21,37 @@ A Library Management System (LMS) that uses Prisma as the ORM (Object-Relational
 - Managing members (add, get, update, delete)
 - Borrowing and returning books
 - overdue books
+
+## Installation Guideline
+
+### Prerequisites
+
+- Node (^20.14.10)
+
+### Installation Steps
+
+First you need to install all dependencies. For installing you need to run **`yarn`** in your terminal.
+
+```
+yarn
+```
+
+### Configuration
+
+1. Create a **`.env`** file in the root directory of the project.
+2. Add `PORT` and `DATABASE_URL` in **`.env`** file Example:
+
+```
+PORT=3000
+
+DATABASE_URL=add a PostgreSQL database url
+```
+Then you can run server useing **`yarn dev`** on your terminal.
+
+```
+yarn dev
+```
+
+---
+
+Now to can run the server locally.
