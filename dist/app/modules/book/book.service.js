@@ -26,6 +26,9 @@ const getABookDB = (bookId) => __awaiter(void 0, void 0, void 0, function* () {
     return result;
 });
 const updateBookDB = (bookId, data) => __awaiter(void 0, void 0, void 0, function* () {
+    yield config_1.default.book.findUniqueOrThrow({
+        where: { bookId },
+    });
     const result = yield config_1.default.book.update({
         where: { bookId },
         data,
@@ -33,6 +36,9 @@ const updateBookDB = (bookId, data) => __awaiter(void 0, void 0, void 0, functio
     return result;
 });
 const deleteBookDB = (bookId) => __awaiter(void 0, void 0, void 0, function* () {
+    yield config_1.default.book.findUniqueOrThrow({
+        where: { bookId },
+    });
     const result = yield config_1.default.book.delete({ where: { bookId } });
     return result;
 });

@@ -17,6 +17,9 @@ const getAMemberDB = async (memberId: string) => {
 };
 
 const updateMemberDB = async (memberId: string, data: Partial<TMember>) => {
+  await prisma.member.findUniqueOrThrow({
+    where: { memberId },
+  });
   const result = await prisma.member.update({
     where: { memberId },
     data,
@@ -25,6 +28,9 @@ const updateMemberDB = async (memberId: string, data: Partial<TMember>) => {
 };
 
 const deleteMemberDB = async (memberId: string) => {
+  await prisma.member.findUniqueOrThrow({
+    where: { memberId },
+  });
   const result = await prisma.member.delete({ where: { memberId } });
   return result;
 };
